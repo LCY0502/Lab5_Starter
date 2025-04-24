@@ -12,24 +12,26 @@ function init() {
   volume = document.getElementsByName("volume")[0];
   volume.onchange = volume_change;
 
-
   vol_img = document.querySelector("#volume-controls img")
   horn_img = document.querySelector("img");
   horn_audio = document.querySelector("audio");
+  
   // set button to play music
   document.querySelector("button").onclick = play_audio;
   // Make the Confetty object
   jsConfetti = new JSConfetti();
+
+  // set Initial value
   horn_change();
   volume_change();
 }
 
 function play_audio(){
-  if(horn.value != "select")
+  if(horn.value != "select"){
     if(horn.value  == "party-horn")
       jsConfetti.addConfetti();
-
     horn_audio.play();
+  }
 }
 
 function horn_change(){
@@ -62,6 +64,7 @@ function set_audio(){
   horn_audio.src = audio_path + new_horn + ".mp3";
 
 }
+
 function set_horn_img(){
   let new_horn = horn.value;
   let path = "assets/images/";
