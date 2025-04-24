@@ -77,8 +77,6 @@ function utter_text(){
     img.src = smiling_path;
   }
   synth.speak(utter);
-
-
 }
 
 
