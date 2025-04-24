@@ -52,7 +52,7 @@ function volume_change(){
   else{
     vol_img.src = "assets/icons/volume-level-3.svg";
   }
-  // horn_audio.volume = value / 100;
+  horn_audio.volume = value / 100;
 }
 
 function set_audio(){
